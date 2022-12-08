@@ -1,4 +1,4 @@
-import { Object3D, Vector3, Quaternion, Raycaster } from "/libs/three128/three.module.js";
+import { Object3D, Vector3, Quaternion, Raycaster } from "./libs/three128/three.module.js";
 
 class Controls {
   constructor(game) {

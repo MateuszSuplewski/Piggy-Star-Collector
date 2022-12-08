@@ -1,5 +1,5 @@
-import {Mesh, CylinderGeometry, MeshBasicMaterial, Vector3, Quaternion } from "/libs/three128/three.module.js";
-import { sphereIntersectsCylinder } from "/libs/Collisions.js";
+import {Mesh, CylinderGeometry, MeshBasicMaterial, Vector3, Quaternion } from "./libs/three128/three.module.js";
+import { sphereIntersectsCylinder } from "./libs/Collisions.js";
 
 class BulletHandler {
   constructor(game) {

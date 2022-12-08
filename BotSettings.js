@@ -1,7 +1,7 @@
 import { Bot } from "./Bot.js";
-import { GLTFLoader } from "/libs/three128/GLTFLoader.js";
-import { DRACOLoader } from "/libs/three128/DRACOLoader.js";
-import { Skeleton, BufferGeometry, Line, Vector3 } from "/libs/three128/three.module.js";
+import { GLTFLoader } from "./libs/three128/GLTFLoader.js";
+import { DRACOLoader } from "./libs/three128/DRACOLoader.js";
+import { Skeleton, BufferGeometry, Line, Vector3 } from "./libs/three128/three.module.js";
 
 class BotSettings {
   constructor(game) {

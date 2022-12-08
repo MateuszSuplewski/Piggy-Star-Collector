@@ -1,7 +1,7 @@
-import { Group, Vector3, Quaternion } from "/libs/three128/three.module.js";
-import { GLTFLoader } from "/libs/three128/GLTFLoader.js";
-import { DRACOLoader } from "/libs/three128/DRACOLoader.js";
-import { SFX } from "/libs/SFX.js";
+import { Group, Vector3, Quaternion } from "./libs/three128/three.module";
+import { GLTFLoader } from "./libs/three128/GLTFLoader.js";
+import { DRACOLoader } from "./libs/three128/DRACOLoader.js";
+import { SFX } from "./libs/SFX.js";
 
 class User {
   constructor(game, pos, heading) {
