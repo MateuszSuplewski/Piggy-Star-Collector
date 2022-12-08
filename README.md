@@ -6,6 +6,8 @@
 
 > Before I introduce you to the project, I would like to say that it was my school project made in early 2021, which means that my JavaScript knowledge at the time was not well structured and complete as it is right now.
 
+> In 2021, I haven't got github account or used git, so you won't find commits here.
+
 In our game you can play as a pig whose main goal is to collect all the stars placed on the board.
 
 How to play & Rules:
