@@ -18,7 +18,7 @@ class UI {
     const playBtn = document.getElementById("playBtn");
     playBtn.style.display = "none";
     const img = playBtn.getElementsByTagName("img")[0];
-    img.src = "/assets/Load/playagain.png";
+    img.src = "./assets/Load/playagain.png";
     this.game.startGame();
   }
 

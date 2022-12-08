@@ -20,7 +20,7 @@ class BotSettings {
   load() {
     const loader = new GLTFLoader().setPath(`${this.game.assetsPath}Load/`);
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath("../../libs/three128/draco/");
+    dracoLoader.setDecoderPath("./libs/three128/draco/");
     loader.setDRACOLoader(dracoLoader);
     this.loadingBar.visible = true;
 

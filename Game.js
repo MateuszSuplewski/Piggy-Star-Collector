@@ -1,14 +1,14 @@
-import * as THREE from "/libs/three128/three.module.js";
-import { GLTFLoader } from "/libs/three128/GLTFLoader.js";
+import * as THREE from "./libs/three128/three.module.js";
+import { GLTFLoader } from "./libs/three128/GLTFLoader.js";
 import { BotSettings } from "./BotSettings.js";
-import { LoadingBar } from "/libs/LoadingBar.js";
-import { Pathfinding } from "/libs/pathfinding/Pathfinding.js";
+import { LoadingBar } from "./libs/LoadingBar.js";
+import { Pathfinding } from "./libs/pathfinding/Pathfinding.js";
 import { User } from "./User.js";
 import { Controls } from "./Controls.js";
 import { BulletHandler } from "./BulletHandler.js";
 import { UI } from "./UI.js";
-import { SFX } from "/libs/SFX.js";
-import { Raycaster, Vector3 } from "/libs/three128/three.module.js";
+import { SFX } from "./libs/SFX.js";
+import { Raycaster, Vector3 } from "./libs/three128/three.module.js";
 
 class Game {
   constructor() {
@@ -20,7 +20,7 @@ class Game {
     this.loadingBar = new LoadingBar();
     this.loadingBar.visible = false;
 
-    this.assetsPath = "/assets/";
+    this.assetsPath = "./assets/";
 
     this.camera = new THREE.PerspectiveCamera(
       45,
@@ -248,7 +248,7 @@ class Game {
     this.user = new User(this, new THREE.Vector3(-5.97, 0.121, -1.49), 1.57);
     this.ui = new UI(this);
 
-    let path = "textures/sb_frozen/frozen_";
+    let path = "./textures/sb_frozen/frozen_";
     let format = ".jpg";
     let urls = [
       path + "ft" + format,
