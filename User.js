@@ -1,4 +1,4 @@
-import { Group, Vector3, Quaternion } from "./libs/three128/three.module";
+import { Group, Vector3, Quaternion } from "./libs/three128/three.module.js";
 import { GLTFLoader } from "./libs/three128/GLTFLoader.js";
 import { DRACOLoader } from "./libs/three128/DRACOLoader.js";
 import { SFX } from "./libs/SFX.js";
@@ -40,7 +40,7 @@ class User {
   load() {
     const loader = new GLTFLoader().setPath(`${this.game.assetsPath}Load/`);
     const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath("../../libs/three128/draco/");
+    dracoLoader.setDecoderPath("./libs/three128/draco/");
     loader.setDRACOLoader(dracoLoader);
 
     loader.load(
