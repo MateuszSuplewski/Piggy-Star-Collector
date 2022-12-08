@@ -6,7 +6,6 @@ import { Skeleton, BufferGeometry, Line, Vector3 } from "./libs/three128/three.m
 class BotSettings {
   constructor(game) {
     this.game = game;
-    this.loadingBar = this.game.loadingBar;
     this.ready = false;
     this.load();
   }
@@ -22,7 +21,6 @@ class BotSettings {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("./libs/three128/draco/");
     loader.setDRACOLoader(dracoLoader);
-    this.loadingBar.visible = true;
 
     loader.load(
       `swat-guy2.glb`,
@@ -34,7 +32,6 @@ class BotSettings {
         }
       },
       (xhr) => {
-        this.loadingBar.update("swat-guy", xhr.loaded, xhr.total);
       },
       (err) => {
         console.error(err);
@@ -94,7 +91,6 @@ class BotSettings {
       this.npcs.push(npc);
     });
 
-    this.loadingBar.visible = !this.loadingBar.loaded;
     this.ready = true;
     this.game.startRendering();
   }

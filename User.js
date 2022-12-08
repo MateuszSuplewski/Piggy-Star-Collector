@@ -12,7 +12,6 @@ class User {
     this.game = game;
     this.camera = game.camera;
     game.scene.add(this.root);
-    this.loadingBar = game.loadingBar;
     this.load();
     this.tmpVec = new Vector3();
     this.tmpQuat = new Quaternion();
@@ -65,7 +64,6 @@ class User {
       },
 
       (xhr) => {
-        this.loadingBar.update("user", xhr.loaded, xhr.total);
       },
 
       (err) => {

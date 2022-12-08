@@ -1,7 +1,7 @@
 import * as THREE from "./libs/three128/three.module.js";
 import { GLTFLoader } from "./libs/three128/GLTFLoader.js";
 import { BotSettings } from "./BotSettings.js";
-import { LoadingBar } from "./libs/LoadingBar.js";
+
 import { Pathfinding } from "./libs/pathfinding/Pathfinding.js";
 import { User } from "./User.js";
 import { Controls } from "./Controls.js";
@@ -17,8 +17,6 @@ class Game {
 
     this.clock = new THREE.Clock();
 
-    this.loadingBar = new LoadingBar();
-    this.loadingBar.visible = false;
 
     this.assetsPath = "./assets/";
 
@@ -265,7 +263,6 @@ class Game {
 
   loadEnvironment() {
     const loader = new GLTFLoader().setPath(`${this.assetsPath}Load/`); //asset
-    this.loadingBar.visible = true;
     loader.load(
       "MyMap4.glb",
       (gltf) => {
@@ -347,10 +344,8 @@ class Game {
         this.controls = new Controls(this);
         this.renderer.setAnimationLoop(this.render.bind(this));
         this.initPathfinding(this.navmesh);
-        this.loadingBar.visible = !this.loadingBar.loaded;
       },
       (xhr) => {
-        this.loadingBar.update("environment", xhr.loaded, xhr.total);
       },
       (err) => {
         console.error(err);
@@ -360,6 +355,7 @@ class Game {
 
   initSounds() {
     this.listener = new THREE.AudioListener();
+    this.listener.context;
     this.camera.add(this.listener);
     this.sfx = new SFX(
       this.camera,
